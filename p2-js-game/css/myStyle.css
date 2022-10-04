@@ -1,0 +1,455 @@
+/* Global setting */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;;
+    color: white;
+}
+
+/* Black background color */
+body {
+    background-color: black;
+}
+
+/* Background gif z-index */
+#background {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+/* title all center with flex direction of column */
+.title {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titleheader {
+    border-top-style: solid;
+    border-bottom-style: solid;
+    padding: 0.5%;
+    margin-bottom: 10px;
+}
+
+.branding {
+    border-top-style: solid;
+    border-bottom-style: solid;
+    padding: 0.5%;
+    margin-bottom: 10px;
+}
+
+/* Start button with faded button and pointer cursor */
+.mainbutton1 {
+    width: 400px;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    border-radius: 12px;
+    opacity: .6;
+    background-color: #ccc;
+    transition: 225ms;
+    cursor: pointer;
+    color: black;
+}
+
+/* Clear start button */
+.mainbutton1:hover{
+    opacity: 1;
+}
+
+/* Instructions button with faded and pointer cursor */
+.mainbutton2 {
+    width: 400px;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    border-radius: 12px;
+    opacity: .6;
+    background-color: #ccc;
+    transition: 225ms;
+    cursor: pointer;
+    color: black;
+    outline: none;
+}
+
+/* Clear instructions button */
+.active, .mainbutton2:hover{
+    opacity: 1;
+}
+
+/* Setting mainbutton1 and 2 active to blue */
+.mainbutton1:active, .mainbutton2:active {
+    background-color: #152a4e;
+}
+
+/* Instructions text is hidden */
+.instructioncontainer {
+    display: flex;
+    justify-content: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* Instructions text is has a faded background */
+.instructiontxt {
+    width: 50%;
+    height: 230px;
+    border-style: solid;
+    text-align: justify;
+    line-height: 1.2;
+    color: black;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #ccc;
+    opacity: .8;
+}
+
+/* copyright is on the buttom of the title screen */
+.copyright {
+    position: absolute;
+    top: 95vh;
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+/* gamescreen is not display since the start button will start it */
+#gamescreen {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Header for game screen */
+.header {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #152a4e;
+}
+
+.titleheader1{
+    margin-bottom: 15px;
+}
+
+.spanheader {
+    border-top-style: solid;
+    border-bottom-style: solid;
+    padding: 0.8% 0%;
+}
+
+.ruletxt {
+    top: 12.6%;
+    left: 8.4%;
+    position: absolute;
+}
+
+.rules{
+    top: 15.2%;
+    left: 5%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+}
+
+.icorule {
+    width: 20px;
+    height: 20px;
+}
+
+.icorule, right {
+    margin: 0px 10px;
+}
+
+/* Centering elements */
+.elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* quit button */
+#quitbutton {
+    right: 5%;
+    width: 100px;
+    height: 70px;
+    position: absolute;
+    background: transparent;
+    border-color: #cccdcd;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 250ms;
+    line-height: 1.5;
+}
+
+#quitbutton:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+.quitbutton:active {
+    background-color: #152a4e;
+}
+
+/* space with z index of -1 */
+.space {
+    width: 100%;
+    height: 15vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.elementcontainer {
+    border-style: solid;
+    border-radius: 12px;
+    margin: 10px 5px;
+    border-color: #cccdcd;
+    font-size: 12px;
+    text-align: center;
+}
+
+.elementname {
+    margin-bottom: 10px;
+}
+/* Removing background, border, outline, and having a transition and margin of each element */
+.element {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 250ms;
+    margin: 10px;
+}
+
+/* scaling hover effect of element */
+.element:hover {
+    transform: scale(1.3);
+}
+
+/* scaling active effect of element */
+.element:active {
+    transform: scale(0.8);
+}
+
+/* Icon element size */
+.iconElement {
+    width: 75px;
+    height: 75px;
+}
+
+/* fighting background with z-index -1 */
+.background1 {
+    width: 100%;
+    height: 77vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.lifepoints,
+.sprites {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.yourlifepoints,
+.computerlifepoints,
+.turns {
+    text-align: center;
+    margin: 3% 10%;
+}
+
+.yourlifepoint,
+.computerlifepoint,
+.turn {
+    margin-bottom: 10px;
+}
+
+.winorlose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-top: 80px;
+}
+
+.fx {
+    top: 70%;
+    left:67%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    display: none;
+}
+
+ .sprites {
+    margin-top: 170px;
+}
+
+.yoursprite {
+    margin-left: 400px;
+}
+
+.computersprite {
+    margin-right: 400px;
+}
+
+.charactersprite {
+    width: 200px;
+    height: 200px;
+}
+
+/* History Screen */
+.historytitle {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+/* Histo has grid-templlay column with reapeat 2 and it size is 1fr */
+.history {
+    width: 70%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+/* Element is faded */
+.result-element {
+    opacity: .5;
+    font-size: 75px;
+}
+
+/* Element winner has a clear emoji */
+.result-element.winner {
+    opacity: 1;
+}
+
+/* Game over Screens */
+.gameoverscreenwin,
+.gameoverscreenlose {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 50px;
+}
+
+/* Both gameove screen has a pulse effect on test win is blue and lose is red */
+.gameovertxtw {
+    margin: 15px;
+    animation-name: txtw;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes txtw {
+    20% {color: white;}
+    40% {color: #152a4e;}
+    60% {color: white;}
+    80% {color: #152a4e;}
+    100% {color: white;}
+}
+
+.gameovertxtl {
+    margin: 15px;
+    animation-name: txtl;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes txtl {
+    20% {color: white;}
+    40% {color: red;}
+    60% {color: white;}
+    80% {color: red;}
+    100% {color: white;}
+}
+
+/* play again with hove and active */
+#playagainw {
+    width: 600px;
+    height: 10vh;
+    background-color: #152a4e;
+    border-style: solid;
+    border-color: #cccdcd;
+    border-radius: 15px;
+    margin-top: 35px;
+    font-size: 30px;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+#playagainw:hover {
+    background-color: #cccdcd;
+    border-color: #152a4e;
+}
+
+.playagainw:active {
+    background-color: #152a4e;
+    border-color: #cccdcd;
+}
+
+#playagainl {
+    width: 600px;
+    height: 10vh;
+    background-color: #152a4e;
+    border-style: solid;
+    border-color: #cccdcd;
+    border-radius: 15px;
+    margin-top: 35px;
+    font-size: 30px;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+#playagainl:hover {
+    background-color: #cccdcd;
+    border-color: #152a4e;
+}
+
+.playagainl:active {
+    background-color: #152a4e;
+    border-color: #cccdcd;
+}
+
+/* reset button */
+.resetbutton {
+    right: 12%;
+    width: 100px;
+    height: 70px;
+    position: absolute;
+    background: transparent;
+    border-color: #cccdcd;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 250ms;
+    display: none;
+}
+
+.resetbutton:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+.resetbutton:active {
+    border: #cccdcd;
+}
