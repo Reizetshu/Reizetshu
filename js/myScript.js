@@ -115,16 +115,19 @@ function selectionElement(element) {
       natureFx.style.display = 'none';
       fireFx.style.display = 'block';
       waterFx.style.display = 'none';
+      fireFx.style.left = '67%';
     }
     else if (computerSelectionElement.name == 'fire') {
       natureFx.style.display = 'none';
       fireFx.style.display = 'none';
       waterFx.style.display = 'block';
+      waterFx.style.left = '67%';
     }
-    else if (computerSelectionElement.name == 'water') {
+    else {
       natureFx.style.display = 'block';
       fireFx.style.display = 'none';
       waterFx.style.display = 'none';
+      natureFx.style.left = '67%';
     }
     // if the computer health is zero then it will show the gameoverw and play the winning sound.
     if(computerScore.innerHTML < 1) {
