@@ -121,7 +121,7 @@ function selectionElement(element) {
       fireFx.style.display = 'none';
       waterFx.style.display = 'block';
     }
-    else {
+    else if (computerSelectionElement.name == 'water') {
       natureFx.style.display = 'block';
       fireFx.style.display = 'none';
       waterFx.style.display = 'none';
