@@ -1,0 +1,185 @@
+/* making reponsive page with laptop L screen 1440px */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    
+    .resetbutton {
+        right: 13%;
+    }
+
+    .yoursprite {
+        margin-left: 305px;
+    }
+
+    .computersprite {
+        margin-right: 260px;
+    }
+}
+
+/* making reponsive page with laptop screen 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    
+    .resetbutton {
+        right: 16%;
+    }
+
+    .winorlose {
+        font-size: 35px;
+    }
+
+    .yoursprite {
+        margin-left: 215px;
+    }
+
+    .computersprite {
+        margin-right: 130px;
+    }
+}
+
+/* making reponsive page with tablet screen 768px */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+    .copyright {
+        font-size: 8px;
+    }
+
+    .ruletxt {
+        font-size: 10px;
+        left: 11.6%
+    }
+    
+    .rules {
+        left: 4%
+    }
+
+    .resetbutton {
+        right: 16%;
+        width: 80px;
+        height: 50px;
+        font-size: 10px;
+    }
+
+    #quitbutton {
+        top: 11.85%;
+        width: 80px;
+        height: 50px;
+        font-size: 10px;
+    }
+    
+    .icorule, right {
+        margin: 0px 5px;
+    }
+    
+    .winorlose {
+        margin-top: 140px;
+        font-size: 25px;
+    }
+    
+    .iconElement {
+        width: 50px;
+        height: 50px
+    }
+
+    .yoursprite {
+        margin-left: 180px;
+    }
+
+    .computersprite {
+        margin-right: 80px;
+    }
+
+    .charactersprite {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* making reponsive page with mobile L screen 425px */
+@media screen and (max-width: 425px) {
+
+    .copyright {
+        font-size: 5px;
+    }
+
+    .ruletxt {
+        top: 11%;
+        left: 12%;
+        font-size: 5px;
+    }
+    
+    .rules {
+        top: 13%;
+        left: 2%;
+        width: 100px;
+        font-size: 8px;
+    }
+
+    .icorule {
+        width: 10px;
+        height: 10px;
+    }
+
+    .resetbutton {
+        top: 8.6%;
+        right: 7%;
+        width: 60px;
+        height: 30px;
+        font-size: 8px;
+    }
+
+    #quitbutton {
+        top: 12.5%;
+        right: 7%;
+        width: 60px;
+        height: 40px;
+        font-size: 7px;
+    }
+
+    .elementcontainer {
+        font-size: 5px;
+    }
+
+    .iconElement {
+        width: 25px;
+        height: 25px
+    }
+
+    .icorule, right {
+        margin: 0px 5px;
+    }
+
+    .yourlifepoint,
+    .computerlifepoint,
+    .turn {
+    font-size: 8px;
+    }
+
+    .winorlose {
+        margin-top: 140px;
+        font-size: 15px;
+    }
+
+    .sprites {
+        margin-top: 225px;
+    }
+
+    .yoursprite {
+        margin-left: 85px;
+    }
+
+    .computersprite {
+        margin-right: 35px;
+    }
+
+    .charactersprite {
+        width: 100px;
+        height: 100px;
+    }
+
+    .fx {
+        width: 100px;
+        height: 100px;
+    }
+
+    .historytitle {
+        margin-top: 150px;
+    }
+}

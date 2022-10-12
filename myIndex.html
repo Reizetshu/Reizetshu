@@ -9,6 +9,7 @@
     <link rel='icon' type='image/xicon' href='assets/images/water.png'>
     <!-- External CSS -->
     <link rel='stylesheet' href='css/myStyle.css' type='text/css'>
+    <link rel='stylesheet' href='css/mediaquery.css' type='text/css'>
     <!-- External JS -->
     <script src='js/myScript.js' defer></script>
     <!-- font from google -->
@@ -19,7 +20,7 @@
 <body>
     <main>
         <!-- Title Screen Section -->
-        <div id='homescreen'>
+        <section id='homescreen'>
             <!-- background -->
             <img src='assets/images/background1.gif' alt='background' id='background'>
             <!-- Title main page -->
@@ -28,9 +29,15 @@
                     <h1 class='titleheader'>Three-way Element</h1>
                     <h4 class='branding'>by Shuriken Realm</h4>
                     <!-- Button for start -->
-                    <input id='startbutton' type='button' value='Start' class='mainbutton1'>
+                    <a id='starttxt' href='gamescreen.html'>
+                        <button id='startbutton' class='mainbutton1'>
+                            Start
+                        </button>
+                    </a>
                     <!-- Button for instruction -->
-                    <input id='instruction' type='button' value='Instructions' class='mainbutton2'>
+                    <button id='instruction' class='mainbutton2'>
+                        Instructions
+                    </button>
                     <!-- Instruction -->
                     <div class='instructioncontainer'>
                         <p class ='instructiontxt'>
@@ -53,156 +60,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Game screen -->
-        <div id='gamescreen'>
-            <!-- Header for game screen -->
-            <div class='header'>
-                <h3 class='titleheader1'>
-                    <span class='spanheader'>
-                        Three-way Element
-                    </span>
-                </h1>
-                <h6 class='branding1'>
-                    <span class='spanheader'>
-                        by Shuriken Realm
-                    </span>
-                </h6>
-            </div>
-            <!-- Selection of elements -->
-            <div class ='elements'>
-                <!-- Space Background -->
-                <img src='assets/images/space.jpg' alt='space' class='space'>
-                <!-- Reset button -->
-                <button class='resetbutton'>Reset</button>
-                <!-- Quit button -->
-                <button id='quitbutton'>Quit Game</button>
-                <!-- Small rules -->
-                <div class='rulestitle'>
-                    <p class='ruletxt'>Rules</p>
-                </div>
-                <!-- Rules icons -->
-                <div class='rules'>
-                    <img src='assets/images/flame.png' alt='fire' class='icorule'>
-                    <p class='right'>&rarr;</p>
-                    <img src='assets/images/leaf.png' alt='nature' class='icorule'>
-                    <p class='right'>&rarr;</p>
-                    <img src='assets/images/water.png' alt='water' class='icorule'>
-                    <p class='right'>&rarr;</p>
-                    <img src='assets/images/flame.png' alt='fire' class='icorule'>
-                </div>
-                <!-- Elements -->
-                <div class='elementcontainer'>
-                    <!-- Button for nature element -->
-                    <!-- data- is a custom attribute  -->
-                    <button class='element' data-element='nature'>
-                        <!-- Image of nature -->
-                        <img src='assets/images/leaf.png' alt='nature' class='iconElement' id='nature1'>
-                    </button>
-                    <p class='elementname'>Nature</p>
-                </div>
-                <div class='elementcontainer'>
-                    <!-- Button for fire element -->
-                    <button class='element' data-element='fire'>
-                        <img src='assets/images/flame.png' alt='fire' class='iconElement' id='fire2'>
-                    </button>
-                    <p class='elementname'>Fire</p>
-                </div>
-                <div class='elementcontainer'>
-                    <!-- Button for water element -->
-                    <button class='element' data-element='water'>
-                        <img src='assets/images/water.png' alt='water' class='iconElement' id='water3'>
-                    </button>
-                    <p class='elementname'>Water</p>
-                </div>
-            </div>
-            <div>
-                <!-- Fighting Background -->
-                <img src='assets/images/background1.gif' alt='background1' class='background1' id='gamebackground'>
-                <!-- Lifepoints -->
-                <div class='lifepoints'>
-                    <!-- Your life points -->
-                    <div class='yourlifepoints'>
-                        <p class='yourlifepoint'>
-                            You
-                        </p>
-                        <p class='yourlifepoint'>
-                            Health: 
-                            <span id='yourlifepointspan' data-your-score>
-                                5
-                            </span>
-                        </p>
-                    </div>
-                    <!-- Turn -->
-                    <div class='turns'>
-                        <p class='turn'>Turn</p>
-                        <!-- Turn Counter -->
-                        <span data-turn-counter>1</span>
-                    </div>
-                    <!-- Computer life points -->
-                    <div class='computerlifepoints'>
-                        <p class='computerlifepoint'>
-                            Computer
-                        </p>
-                        <p  class='computerlifepoint'>
-                            Health: 
-                            <span  id='computerlifepointspan' data-computer-score>
-                                5
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- Turn text -->
-                <div class='winorlose' id='youwinlose'>
-                    <h3 id='turntxt'>Start!</h3>
-                </div>
-                </div>
-                <!-- Animation Effects -->
-                <div class='fxs'>
-                    <img src='assets/images/naturefx.gif' alt='naturefx' class='fx' id='naturefx'>
-                    <img src='assets/images/firefx.gif' alt='firefx' class='fx' id='firefx'>
-                    <img src='assets/images/waterfx.gif' alt='waterfx' class='fx' id='waterfx'>
-                </div>
-                <!-- Character Sprites -->
-                <div class='sprites'>
-                    <!-- Your Sprites -->
-                    <div class='yoursprite'>
-                        <img src='assets/images/itachi.gif' alt='itachi' class='charactersprite'>
-                    </div>
-                    <!-- Computer Sprites -->
-                    <div class='computersprite'>
-                        <img src='assets/images/vilain.gif' alt='villain'
-                        class='charactersprite'>
-                    </div>
-                </div>
-                <!-- History log -->
-                <div class='historytitle'>
-                    <h3>History</h3>
-                </div>
-            <div class='history'>
-                <div class='historylog'>
-                    You
-                </div>
-                <!-- Final column to put a new div -->
-                <div class='historylog' data-final-column>
-                    Computer
-                </div>
-            </div>
-        </div>
-        <!-- Game over Screen when you win -->
-        <div class='gameoverscreenwin'>
-            <h1 class='gameovertxtw'>You Win</h1>
-            <h1 class='gameovertxtw'>Game Over</h1>
-            <!-- Play again button -->
-            <button id='playagainw'> Play Again?</button>
-        </div>
-        <!-- Game over Screen when you lose -->
-        <div class='gameoverscreenlose'>
-            <h1 class='gameovertxtl'>You Lose</h1>
-            <h1 class='gameovertxtl'>Game Over</h1>
-            <!-- Play again button -->
-            <button id='playagainl'> Play Again?</button>
-        </div>
+        </section>
     </main>
 </body>
 </html>

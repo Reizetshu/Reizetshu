@@ -3,7 +3,8 @@ const accordion = document.getElementsByClassName('mainbutton2');
 const homeScreen = document.querySelector('#homescreen');
 const startButton = document.querySelector('.mainbutton1');
 const gameScreen = document.querySelector('#gamescreen');
-const quitButton = document.querySelector('#quitbutton');
+const resetButton = document.querySelector('.resetbutton');
+const quitButton = document.querySelector('.quitbutton');
 const playAgainButtonW = document.querySelector('#playagainw');
 const playAgainButtonL = document.querySelector('#playagainl');
 const gameOverScreenWin = document.querySelector('.gameoverscreenwin');
@@ -51,24 +52,21 @@ for ( let count = 0; count < accordion.length; count++) {
   });
 }
 
-// This button will go on the gameScreen
-startButton.addEventListener('click', () => {
-    homeScreen.style.display = 'none';
-    gameScreen.style.display = 'block';
+// reset the gamescreen
+resetButton.addEventListener('click', () => {
+  location.reload();
 });
 
 // Quit button will go back to the title screen
 quitButton.addEventListener('click', () => {
   //this will refresh the page to reset everything
   if (confirm('Do you want to EXIT THE GAME?')){
-    location.reload();
   }
 });
 
-// playAgainButton will go back to the title screen
+// playAgainButton will go back to the gamescreen
 playAgainButtonW.addEventListener('click', () => {
   location.reload();
-
 });
 
 playAgainButtonL.addEventListener('click', () => {
@@ -181,7 +179,7 @@ function selectionElement(element) {
 
 // funtion to decrement score.
 function decrementScore(scoreSpan) {
-  scoreSpan.innerText = parseInt(scoreSpan.innerText) - 1;
+  scoreSpan.innerText = parseInt(scoreSpan.innerText) - minusDamage();
 }
 
 // funtion to increment turns.
@@ -209,6 +207,16 @@ function randomElement() {
   const random = Math.floor(Math.random() * ELEMENTS.length);
   // return random ELEMENTS
   return ELEMENTS[random];
+}
+
+// it will random damage
+function randomDamage(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+function minusDamage() {
+  let randomDamageResult = randomDamage(5, 21);
+  return randomDamageResult;
 }
 
 // funtion for the click sound on the element

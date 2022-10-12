@@ -119,7 +119,7 @@ body {
 
 /* gamescreen is not display since the start button will start it */
 #gamescreen {
-    display: none;
+    display: block;
     width: 100%;
     justify-content: center;
     flex-direction: column;
@@ -176,8 +176,33 @@ body {
     align-items: center;
 }
 
+/* reset button */
+.resetbutton {
+    right: 12%;
+    width: 100px;
+    height: 70px;
+    position: absolute;
+    background: transparent;
+    border-color: #cccdcd;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 250ms;
+    display: block;
+}
+
+.resetbutton:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+.resetbutton:active {
+    border: #cccdcd;
+}
+
 /* quit button */
 #quitbutton {
+    top: 12%;
     right: 5%;
     width: 100px;
     height: 70px;
@@ -291,7 +316,7 @@ body {
     display: none;
 }
 
- .sprites {
+.sprites {
     margin-top: 170px;
 }
 
@@ -428,28 +453,4 @@ body {
 .playagainl:active {
     background-color: #152a4e;
     border-color: #cccdcd;
-}
-
-/* reset button */
-.resetbutton {
-    right: 12%;
-    width: 100px;
-    height: 70px;
-    position: absolute;
-    background: transparent;
-    border-color: #cccdcd;
-    border-radius: 8px;
-    padding: 10px;
-    cursor: pointer;
-    transition: 250ms;
-    display: none;
-}
-
-.resetbutton:hover {
-    background-color: #ccc;
-    color: black;
-}
-
-.resetbutton:active {
-    border: #cccdcd;
 }
